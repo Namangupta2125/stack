@@ -8,7 +8,7 @@ app.use(cors());
 
 const PORT = 5000;
 
-app.get("/get-comments", async (req, res) => {
+app.get("/", async (req, res) => {
   try {
     const { url } = req.query;
     if (!url) return res.status(400).json({ error: "Post URL is required" });
